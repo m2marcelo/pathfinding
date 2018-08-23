@@ -15,6 +15,7 @@ The implementation was based in A star solution with tiebraking when we have to 
 ## Solution details
 
 0 - Checking the parameters
+
 There is a parameter check on the code, but according to the test explanation, it says that we can safely assume that
 everything is ok, so for that reason I left the check commented and will disconsider for now.
 
@@ -24,14 +25,18 @@ We get an array and we need to handle it as a 2d grid, like a matrix, to be more
 return the position on a matrix based notation, folowing the specification as a row-major order.
 
 Example:
-Array: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Array: 
+
+    A = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 Converting to a matrix:
-| 1, 2, 3, |
-| 4, 5, 6, |
-| 7, 8, 9, |
-So, if we want the element e[1][2] in the matrix [3, 3] -
-That would be 6 in the array it is in index 7
-following the formula x + (y * nMapWidth) -> 1 + 2*3 -> 1+6 = 7
+
+        [ 1 2 3 ]
+    M = [ 4 5 6 ]
+        [ 7 8 9 ]
+
+So, if we want the element e[1][2] in the matrix [3, 3], That would be 6 in the array it is in index 7 when following the formula x + (y * nMapWidth) -> 1 + 2*3 -> 1+6 = 7
 
 2 - Heuristic
 
@@ -44,10 +49,11 @@ For this solution, I won't handle as separated lists, such as open lists and clo
 the direction approach, creating values for each direction based on the matrix width to check up and down elements and postion
 +1 and -1 for right and left direction, as the following example.
 
-Consider this following 3,3 matrix:
-| 1, 2, 3, |
-| 4, 5, 6, |
-| 7, 8, 9, |
+Consider this following [3,3] matrix:
+
+        [ 1 2 3 ]
+    M = [ 4 5 6 ]
+        [ 7 8 9 ]
 
 Considering the current element 5, the up element will be 2, the down element will be 8, left will be 4 and right will be 6.
 For left and right is easy to find, just add or remove one for the current position, but for the up we need to get the current
@@ -69,6 +75,7 @@ explicit too.
 
 
 5 - How the algorithm works?
+
 The solution begins handling the input and getting the start and end position on a matrix based notation, create two vectors to
 store the path, one holds the node info and the other will hold the path info, that will be needed to retrieve the path indexes.
 Then we create a priority queue with tuples and with the greater function to decides which path it will goes, acting as a
