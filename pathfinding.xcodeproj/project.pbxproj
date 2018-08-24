@@ -28,7 +28,6 @@
 		F51C1EC12125971100157147 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F51C1EC82125974800157147 /* astar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = astar.cpp; sourceTree = "<group>"; };
 		F51C1EC92125974800157147 /* astar.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = astar.hpp; sourceTree = "<group>"; };
-		F51C1EDB2126D4C100157147 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +63,6 @@
 				F51C1EC12125971100157147 /* main.cpp */,
 				F51C1EC82125974800157147 /* astar.cpp */,
 				F51C1EC92125974800157147 /* astar.hpp */,
-				F51C1EDB2126D4C100157147 /* README.md */,
 			);
 			path = pathfinding;
 			sourceTree = "<group>";
